@@ -12,6 +12,7 @@ import { Stopwatch } from './components/Stopwatch'
 import { TrafficLight } from './components/TrafficLight'
 import { TicTacToe } from "./components/TicTacToe/TicTacToe"
 import "./components/TicTacToe/TicTacToe.module.css"
+import { ProductsSearch } from './components/ProductsSearch'
 
 const comments = {
   id: 1,
@@ -74,8 +75,9 @@ function App() {
 
             {/* <TrafficLight /> */}
 
-            <TicTacToe />
+            {/* <TicTacToe /> */}
 
+        <ProductsSearch />
 
       </div>
       <h4>App</h4>

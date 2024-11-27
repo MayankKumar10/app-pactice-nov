@@ -201,6 +201,49 @@ export const JavaScriptQuestions = () => {
   let SumOfAllNaturalNumbers = (num) => (num * (num + 1))/2
   console.log("SumOfAllNaturalNumber", SumOfAllNaturalNumbers(10)) 
  
+  const missingNum = (nums) => {
+    let n = nums.length + 1
+    let acceptedSum = (n* (n+1))/2
+    let acctualSum = nums.reduce((acc, val)=> acc+= val, 0)
+    let missingNum = acceptedSum - acctualSum
+    return missingNum
+  }
+
+  console.log("missingNum", missingNum([9,6,4,2,3,5,7,0,1]))
+
+  /*
+  Fizzbuzz - Write a program to return an array from 1 to 100. But for every multiple of 3, replace the number with "Fizz", for every multiple of 5, replace the number with "Buzz" and for every multiple of 3 & 5, replace it with "FizzBuzz".
+  Your output should look something like this `1, 2, Fizz, 4, Buzz, Fizz, 7, 8, Fizz, Buzz, 11, Fizz, 13, 14, FizzBuzz, 16, 17 .....`
+  
+  */
+
+  let fizzbuzz = (num) => {
+    let arr = []
+
+    for(let i=1; i<= num; i++){
+      if(i % 3 === 0 && i % 5 === 0){
+        arr.push("FizzBuzz")
+      } else if(i % 3 === 0){
+        arr.push("Fizz")
+      } else if(i % 5 === 0){
+        arr.push("Buzz")
+      } else {
+        arr.push(i)
+      }
+    }
+
+    return arr
+  }
+
+  console.log("fizzbuzz", fizzbuzz(100))
+
+  const add = (a, b=0) => b ? a+b : (next) => a+next 
+
+
+    console.log("a+b",add(2, 5))
+    console.log("a and b", add(2)(5))
+    
+
   return (
     <div>
       <h4>JavaScript Questions</h4>
