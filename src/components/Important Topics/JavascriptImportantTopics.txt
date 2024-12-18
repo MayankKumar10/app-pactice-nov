@@ -1,0 +1,142 @@
+  
+1. Async/Await:
+Learn how to use async and await for asynchronous programming, making it more readable and concise.
+MDN Web Docs - async function
+
+2. Promises:
+Deepen your understanding of promises and how they handle asynchronous operations.
+MDN Web Docs - Promises
+
+3. Generators:
+Explore generators and how they can be used for asynchronous control flow.
+MDN Web Docs - Generators
+
+  let gen = function* () {
+    let index = 0;
+
+    while (true) {
+      yield index++;
+    }
+
+    //yield 1
+    //yield 2
+    //yield 3
+  };
+
+  let callGen = gen();
+
+  console.log(`gen ${callGen.next().value}`);
+  console.log(`gen ${callGen.next().value}`);
+  console.log(`gen ${callGen.next().value}`);
+
+
+
+4. Closures:
+Understand closures and their role in maintaining state in JavaScript functions.
+MDN Web Docs - Closures
+
+5. Functional Programming:
+Dive into functional programming concepts like higher-order functions, pure functions, and immutability.
+Functional Programming Principles in JavaScript
+
+6. Design Patterns:
+Familiarize yourself with common design patterns such as Singleton, Observer, and Factory patterns.
+JavaScript Design Patterns
+https://www.freecodecamp.org/news/javascript-design-patterns-explained/
+
+
+Sigleton : the singleton pattern consists of an object that can't be copied or modified
+
+const Config = {
+  start: () => console.log('App has started'),
+  update: () => console.log('App has updated'),
+}
+
+// We freeze the object to prevent new properties being added and existing properties being modified or removed
+Object.freeze(Config)
+
+Config.start() // "App has started"
+Config.update() // "App has updated
+
+Observer: The observer pattern lets you define a subscription mechanism to notify multiple objects about any events that happen to the object they’re observing. Basically, it's like having an event listener on a given object, and when that object performs the action we're listening for, we do something.
+
+useEeffect is observer example
+
+Factory Patterns: pattern provides an interface for creating objects that can be modified after creation.
+
+function Alien(name, phrase) {
+
+  this.name = name
+    this.phrase = phrase
+    this.species = "alien"
+}
+
+Alien.prototype.fly = () => console.log("Zzzzzziiiiiinnnnnggggg!!")
+Alien.prototype.sayPhrase = () => console.log(this.phrase)
+
+const alien1 = new Alien("Ali", "I'm Ali the alien!")
+
+console.log(alien1.name) // output "Ali"
+console.log(alien1.phrase) // output "I'm Ali the alien!"
+alien1.fly() // output "Zzzzzziiiiiinnnnnggggg"
+
+
+7. Prototypes and Inheritance:
+Explore JavaScript's prototypal inheritance and how it differs from classical inheritance.
+MDN Web Docs - Inheritance and the prototype chain
+
+8. ES6+ Features:
+Stay updated on the latest ECMAScript features, including destructuring, arrow functions, spread/rest operators, and template literals.
+ES6 Features
+
+9. WebSockets:
+Learn how to implement real-time communication using WebSockets for building interactive applications.
+MDN Web Docs - WebSockets
+
+WebSockets is way to create bidirectional duplex connection
+1st req with upgrade hadder is send from to client to server in HTTP format
+to convert connection from HTTP to websockects 
+
+server agreed then sent status code 101 (change connection)
+1st response get from server to client as 101(change connection) response code 
+
+10. Memory Management:
+Understand how JavaScript handles memory and common memory management techniques.
+JavaScript Memory Management
+
+11. Web Workers:
+Explore Web Workers for concurrent processing in the background to improve performance.
+MDN Web Docs - Web Workers
+
+web workers provide a way to run the task on different thread then 
+where javascript is running or callstack is running 
+no of web workers is createad is directly proposnal to how many thread we have in our system 
+n weborkers = n thread
+
+it do not modify DOM element like callstack but we can do expensive computation on it, so our callstack stay idle or work on important task which can not halt the system while we are running our program
+
+it can take a help of third party library in Nodejs ws workers
+to use webworker in our system
+
+onMessage
+postMessage is used to send data and receive data in webworkers
+
+
+12. Error Handling:
+Master error handling techniques, including try/catch blocks and custom error classes.
+MDN Web Docs - Error
+
+13. Module Systems:
+Understand different module systems in JavaScript, including CommonJS and ES6 Modules.
+MDN Web Docs - Modules
+
+14. Browser APIs:
+Explore various browser APIs, such as the DOM API, Fetch API, and others for web development.
+MDN Web Docs - Web APIs
+
+15. Service Workers:
+Learn about Service Workers for building Progressive Web Apps (PWAs) and offline capabilities.
+MDN Web Docs - Service Workers
+
+Service worker (PWAs) help us to write application which can also run offline it's highly used in instagram, twitter and other platforms where we want to show data to user when there is no connection of internet 
+

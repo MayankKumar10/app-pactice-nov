@@ -13,6 +13,7 @@ import { TrafficLight } from './components/TrafficLight'
 import { TicTacToe } from "./components/TicTacToe/TicTacToe"
 import "./components/TicTacToe/TicTacToe.module.css"
 import { ProductsSearch } from './components/ProductsSearch'
+import { Delhivery_Dec_Questions } from './components/Company Interviews/Productbased/Delhivery productbased/Delhivery_Dec_Questions'
 
 const comments = {
   id: 1,
@@ -77,7 +78,11 @@ function App() {
 
             {/* <TicTacToe /> */}
 
-        <ProductsSearch />
+        {/* <ProductsSearch /> */}
+
+      {/* Companies Interview Experiences */}
+
+      <Delhivery_Dec_Questions />
 
       </div>
       <h4>App</h4>

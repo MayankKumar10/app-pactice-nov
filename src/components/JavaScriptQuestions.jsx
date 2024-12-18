@@ -9,7 +9,7 @@ export const JavaScriptQuestions = () => {
   console.log("duplicate", duplicate([1,2,4,1,2,3,4,2,5,6,7,]))
 
 
-  let consicutiveArr = (str) => {
+  let consecutiveArr = (str) => {
     let strNew = []
 
     for(let i=0; i< str.length; i++){
@@ -21,7 +21,7 @@ export const JavaScriptQuestions = () => {
     return strNew.join("")
   }
 
-  console.log("consicutiveArr", consicutiveArr("Adsdasdasaaa"))
+  console.log("consecutiveArr", consecutiveArr("Adsdasdasaaa"))
 
 
   let sumArr = [1,2,3,4,5,6,7,8,9,10]
@@ -46,8 +46,8 @@ export const JavaScriptQuestions = () => {
   let ArrOfTwoSum = (arr, num) => {
     let arrNew = []
 
-    for(let i=0; i< arr.length; i++){
-      for(let j=i+1; j< arr.length; j++){
+    for(let i = 0; i < arr.length; i++){
+      for(let j = i+1; j < arr.length; j++){
         if(arr[i] + arr[j] === num){
           arrNew.push({i, j})
         }
@@ -236,6 +236,48 @@ export const JavaScriptQuestions = () => {
 
     console.log("a+b",add(2, 5))
     console.log("a and b", add(2)(5))
+
+
+  const findingLongestSequenceInArray = (arr) => {
+    let longestSequence = []
+    let currentSequence = [arr[0]]
+
+    for(let i=0; i < arr.length; i++ ){
+      if(arr[i] > arr[i-1]){
+        currentSequence.push(arr[i])
+      } else {
+        if(currentSequence.length > longestSequence.length) {
+          longestSequence = [...currentSequence]
+        }
+        currentSequence = [arr[i]]
+      }
+
+    }
+
+    if(currentSequence.length > longestSequence.length) {
+      longestSequence = [...currentSequence]
+    }
+
+    return longestSequence
+
+  }
+
+  const calculateSumMeanMedianStateFromJSON = (arr) => {
+    let sum = arr.reduce((acc, val)=> acc + val, 0)
+    let mean = sum / arr.length
+
+    let median = 0
+    arr.sort((a,b)=> a-b)
+    let mid = Math.floor(arr.length / 2)
+    if( arr.length % 2 === 0 ) {
+      median = (arr[mid-1] / arr[mid]) / 2
+    } else {
+      median = arr[mid]
+    }
+
+    return { sum, mean, median }
+    
+  }
     
 
   return (
