@@ -14,6 +14,7 @@ import { TicTacToe } from "./components/TicTacToe/TicTacToe"
 import "./components/TicTacToe/TicTacToe.module.css"
 import { ProductsSearch } from './components/ProductsSearch'
 import { Delhivery_Dec_Questions } from './components/Company Interviews/Productbased/Delhivery productbased/Delhivery_Dec_Questions'
+import { InfiniteScroll } from './components/InfiniteScroll'
 
 const comments = {
   id: 1,
@@ -82,7 +83,9 @@ function App() {
 
       {/* Companies Interview Experiences */}
 
-      <Delhivery_Dec_Questions />
+      {/* <Delhivery_Dec_Questions /> */}
+
+          <InfiniteScroll />
 
       </div>
       <h4>App</h4>
